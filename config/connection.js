@@ -15,6 +15,7 @@ connection.connect(function(error) {
     if (error) {
       console.error("MYSQL CONNECTION ERROR: " + error);
     }
+    console.log("Connected to MySQL server.");
 });
 
 // exports connection

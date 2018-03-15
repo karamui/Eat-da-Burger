@@ -24,5 +24,5 @@ app.use(routes);
 
 // starts Express.js server
 app.listen(PORT, function() {
-	console.log("This app is listening on PORT: " + PORT);
+	console.log("This app is listening on PORT: " + PORT + ".");
 });

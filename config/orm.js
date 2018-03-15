@@ -5,6 +5,7 @@ var connection = require("./connection.js");
 var orm = {
 	selectAll: function(tableName) {
 	    var queryString = "SELECT * FROM " + tableName;
+	    console.log(queryString);
 	    
 	    connection.query(queryString, function(error, result) {
 	      	if (error) {
@@ -13,7 +14,8 @@ var orm = {
 	      	}
 
 	      	// return all burger data
-	      	res.render("index", { burgers: data });
+	      	console.log("Successfully selected all data.");
+	      	res.render("index", { burgers: result });
 	    });
 	},
 	insertOne: function(tableName, burgerName) {
