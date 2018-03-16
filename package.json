@@ -4,7 +4,8 @@
   "description": "Node.js, MySQL, Express.js, Handlebars.js homework assignment - full-stack restaurant application.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
