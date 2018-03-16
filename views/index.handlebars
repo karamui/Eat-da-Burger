@@ -1,36 +1,41 @@
 <div class="container">
 	<div class="row header text-center"> <!-- header -->
-		<img class="img-responsive icon" src="./img/burger.png">
+		<img class="img-responsive icon" src="./assets/img/burger.png">
 		<h1>Eat-da-Burger!</h1>
 		<h2>Welcome, my hungry friend! Here is a collection of mouthwatering burgers just begging to be eaten by you.</h2>
 
 		<p class="instructions">Click the knife and fork to eat any burger in stock (left). Click the waiter to order more of any burger out of stock (right). Don't see a burger you want to eat? Gosh you're picky. Order your very own one-of-a-kind burger below.</p>
 	</div> <!-- header row -->
 
-	<div class="row orderup">
-		<form>
-			<div class="form-group">
-			  	<label for="name">Burger Name</label>
-			  	<input type="text" class="form-control" id="name" placeholder="My delicious burger is called...">
-			</div>
-		</form>
-		<button type="submit" id="submit">Order up!</button>
+	<div class="row orderup  text-center">
+		<input type="text" class="form-control" id="name" placeholder="My delicious burger is called..."><button type="submit" id="submit">Order up!</button>
 	</div> <!-- survey row -->
 
 	<div class="row"> <!-- burgers -->
 		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"> <!-- left column -->
 			<h1 id="left">To Be Eaten...</h1>
-			{{ #each burgers }}
-			<p>hi</p>
+			{{#each burgers}}
+			{{#unless devoured}}
+			<div class="burgerblock">
+				<img src="./assets/img/burger.png" class="tinyicon burgericon"><img src="./assets/img/eat.png" class="tinyicon eaticon" data-id="{{this.id}}"><h2>{{burger_name}}</h2>
+			</div>
+			{{/unless}}
 			{{/each}}
 		</div> <!-- left column -->
 
 		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"> <!-- right column -->
 			<h1 id="right">Already Devoured!</h1>
+			{{#each burgers}}
+			{{#if devoured}}
+			<div class="burgerblock">
+				<img src="./assets/img/burger.png" class="tinyicon burgericon eaten"><img src="./assets/img/waiter.png" class="tinyicon waitericon" data-id="{{this.id}}"><h2>{{burger_name}}</h2>
+			</div>
+			{{/if}}
+			{{/each}}
 		</div> <!-- right column -->
 	</div> <!-- burgers row -->
 
-	<div class="row"> <!-- footer -->
+	<div class="row text-center"> <!-- footer -->
 		<p class="footer"><a href="https://github.com/karamui/burger">GitHub</a></p>
 	</div> <!-- footer row -->
 </div> <!-- container -->

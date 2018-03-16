@@ -1,0 +1,86 @@
+/* ------------------------------------ GENERAL */
+
+body {
+	font-family: "Mina", sans-serif;
+	font-size: 15px;
+}
+
+div.container {
+	width: 85%;
+	margin: 25px auto;
+}
+
+div.burgerblock {
+	margin: 10px auto;
+	padding: 5px 10px 0px 10px;
+	background-color: #fffbc6;
+	border-radius: 15px;
+}
+
+/* ------------------------------------ MISCELLANEOUS */
+
+input.form-control {
+	display: inline-block;
+	width: 75%;
+	margin: 10px auto auto auto;
+	font-size: 15px;
+}
+
+button {
+	display: inline-block;
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-bottom: 25px;
+	padding: 5px 10px;
+	font-size: 17px;
+	border: none;
+	border-radius: 5px;
+}
+
+/* ------------------------------------ IMAGES */
+
+img.icon {
+	margin: 10px auto;
+}
+
+img.tinyicon {
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-right: -10px;
+	padding: 10px;
+	height: 50px;
+}
+
+img.burgericon {
+	margin-bottom: 15px;
+}
+
+img.eaten {
+	filter: grayscale(100%);
+}
+
+/* ------------------------------------ HEADERS AND TEXT */
+
+h1 {
+	font-size: 50px;
+}
+
+h1#left, h1#right {
+	font-size: 40px;
+}
+
+h2 {
+	display: inline-block;
+	margin-left: 15px;
+	font-size: 25px;
+}
+
+p.instructions {
+	margin-top: 25px;
+}
+
+p.footer {
+	margin-top: 25px;
+	font-size: 10px;
+	text-transform: uppercase;
+}
