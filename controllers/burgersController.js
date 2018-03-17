@@ -8,7 +8,7 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 // default route to display all burgers
-router.get("/burgers", function(request, response) {
+router.get("/", function(request, response) {
   burger.select(function(data) {
     response.render("index", { burgers: data });
   });

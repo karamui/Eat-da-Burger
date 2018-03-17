@@ -15,12 +15,12 @@ app.use(bodyParser.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// loads static files
-app.use(express.static("./public"));
-
 // imports routes
 var routes = require("./controllers/burgersController.js");
 app.use(routes);
+
+// loads static files
+app.use(express.static("./public"));
 
 // starts Express.js server
 app.listen(PORT, function() {
