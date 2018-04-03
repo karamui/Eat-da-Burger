@@ -13,8 +13,11 @@ You can play with this application on [Heroku](https://lit-ridge-85575.herokuapp
 * Bootstrap
 * JavaScript
 * jQuery
+* AJAX
+* APIs
 * Node.js
 * Node.js packages (body-parser, express, express-handlebars, mysql)
 * Express.js
+* Handlebars.js
 * MySQL
 * Heroku
